@@ -28,7 +28,7 @@ const NavBar = () => {
      
             <li>
               <NavLink
-                to="/ourservices"
+                to="/bookingdetails"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -37,7 +37,7 @@ const NavBar = () => {
                     : ""
                 }
               >
-                Our Services
+               Booking Details
               </NavLink>
             </li>
             <li>
@@ -91,7 +91,7 @@ const NavBar = () => {
      
             <li>
               <NavLink
-                to="/ourservices"
+                to="/bookingdetails"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -100,7 +100,7 @@ const NavBar = () => {
                     : ""
                 }
               >
-                Our Services
+                Booking Details
               </NavLink>
             </li>
             <li>

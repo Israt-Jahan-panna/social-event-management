@@ -4,10 +4,10 @@ import {
 import Roots from "../layouts/Roots";
 import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import OurServices from "../pages/OurServices/OurServices";
 import ContacUs from "../pages/ContactUs/ContactUs";
 import Registrations from "../pages/Registrations/Registrations";
 import EventsDetails from "../Events/EventsPage/EventsDetails";
+import BookingDetails from "../pages/BookingDetails/BookingDetails";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
           element:<ContacUs></ContacUs>
         },
         {
-          path:"/ourservices",
-          element:<OurServices></OurServices>,
+          path:"/bookingdetails",
+          element:<BookingDetails></BookingDetails>,
           loader:() => fetch('/social-event-management.json')
         },
         {

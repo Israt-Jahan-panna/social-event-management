@@ -15,7 +15,7 @@ const EventsDetails = () => {
       localStorage.setItem("donations", JSON.stringify(addedDonationArray));
       swal(
         "Thanks you For Your Booking ",
-        "We will Call For Confirmations",
+        "We will be in touch to confirm your booking.",
         "success"
       );
     } else {
@@ -23,7 +23,7 @@ const EventsDetails = () => {
       localStorage.setItem("donations", JSON.stringify(addedDonationArray));
       swal(
         "Thanks you For Your Booking ",
-        "We will Call For Confirmations",
+        "We will be in touch to confirm your booking.",
         "success"
       );
     }
@@ -46,7 +46,7 @@ const EventsDetails = () => {
           </p>
         </div>
         <div className="p-6 pt-3">
-          <button
+          <button onClick={handleEvents}
             className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
             data-ripple-light="true"
