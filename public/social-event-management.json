@@ -1,0 +1,74 @@
+ [
+      {
+        "id": 1,
+        "name": "Weddings",
+        "image": "wedding.jpg",
+        "price": "$1000",
+        "short_description": "Elegant weddings tailored to your dreams.",
+        "card_background_color": "#FFD700",
+        "button_color": "#FF5733",
+        "button_text": "Book Now"
+      },
+      {
+        "id": 2,
+        "name": "Birthday Parties",
+        "image": "birthday.jpg",
+        "price": "$300",
+        "short_description": "Fun-filled birthday celebrations for all ages.",
+        "card_background_color": "#87CEEB",
+        "button_color": "#FFA500",
+        "button_text": "Book Now"
+      },
+      {
+        "id": 3,
+        "name": "Anniversaries",
+        "image": "anniversary.jpg",
+        "price": "$500",
+        "short_description": "Romantic anniversaries made unforgettable.",
+        "card_background_color": "#FF69B4",
+        "button_color": "#9932CC",
+        "button_text": "Book Now"
+      },
+      {
+        "id": 4,
+        "name": "Engagement Parties",
+        "image": "engagement.jpg",
+        "price": "$400",
+        "short_description": "Celebrate your love with a memorable engagement party.",
+        "card_background_color": "#32CD32",
+        "button_color": "#FF4500",
+        "button_text": "Book Now"
+      },
+      {
+        "id": 5,
+        "name": "Retirement Parties",
+        "image": "retirement.jpg",
+        "price": "$250",
+        "short_description": "Farewell to a fulfilling career with style.",
+        "card_background_color": "#FFA07A",
+        "button_color": "#6A5ACD",
+        "button_text": "Book Now"
+      },
+      {
+        "id": 6,
+        "name": "Baby Shower",
+        "image": "babyshower.jpg",
+        "price": "$200",
+        "short_description": "Joyful baby showers to welcome a new life.",
+        "card_background_color": "#87CEEB",
+        "button_color": "#FFD700",
+        "button_text": "Book Now"
+      },
+      {
+        "id": 7,
+        "name": "Graduation Parties",
+        "image": "graduation.jpg",
+        "price": "$350",
+        "short_description": "Celebrate academic milestones with style.",
+        "card_background_color": "#FFB6C1",
+        "button_color": "#4682B4",
+        "button_text": "Book Now"
+      }
+    ]
+  
+  
