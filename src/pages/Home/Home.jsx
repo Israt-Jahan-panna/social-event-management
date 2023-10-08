@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner> 
-            <div >
+            <div className="bg-amber-300">
                <div className="px-24">
                <EventsPage events={events}></EventsPage>
                </div>

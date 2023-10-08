@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const NavBar = () => {
   return (
     <div className="max-w-[1600px] mx-auto">
-      <div className="navbar bg-orange-100 w-full py-5 px-24 ">
+      <div className="navbar bg-amber-300 w-full py-5 px-24 ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className=" lg:hidden">
