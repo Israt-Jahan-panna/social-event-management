@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home>,
-          // loader:'/social-event-management.json'
+          loader:() => fetch('/social-event-management.json')
         },
         {
           path:"/contactus",
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
         },
         {
           path:"/ourservices",
-          element:<OurServices></OurServices>
+          element:<OurServices></OurServices>,
+          loader:() => fetch('/social-event-management.json')
         },
         {
           path:"/registration",
