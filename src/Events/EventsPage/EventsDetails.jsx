@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import swal from "sweetalert";
 
 const EventsDetails = () => {
@@ -12,7 +12,7 @@ const EventsDetails = () => {
     //when value is emty in this time it will set
     if (!eventsItems) {
       addedDonationArray.push(event);
-      localStorage.setItem("donations", JSON.stringify(addedDonationArray));
+      localStorage.setItem(" events", JSON.stringify(addedDonationArray));
       swal(
         "Thanks you For Your Booking ",
         "We will be in touch to confirm your booking.",
@@ -20,7 +20,7 @@ const EventsDetails = () => {
       );
     } else {
       addedDonationArray.push(...eventsItems, event);
-      localStorage.setItem("donations", JSON.stringify(addedDonationArray));
+      localStorage.setItem(" events", JSON.stringify(addedDonationArray));
       swal(
         "Thanks you For Your Booking ",
         "We will be in touch to confirm your booking.",
@@ -38,7 +38,12 @@ const EventsDetails = () => {
         <div className="p-6">
           <div className="mb-3 flex items-center justify-between">
             <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
-              Wooden House, Florida
+             {name}
+            </h5>
+          </div>
+          <div className="mb-3 flex items-center justify-between">
+            <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
+             {short_description}
             </h5>
           </div>
           <p className="block font-sans text-base font-light leading-relaxed text-gray-700 antialiased">
@@ -46,6 +51,7 @@ const EventsDetails = () => {
           </p>
         </div>
         <div className="p-6 pt-3">
+          
           <button onClick={handleEvents}
             className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
@@ -53,6 +59,7 @@ const EventsDetails = () => {
           >
             {button_text}
           </button>
+          
         </div>
       </div>
     </div>

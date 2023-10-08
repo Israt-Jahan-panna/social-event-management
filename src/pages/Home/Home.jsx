@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../Header/Banner/Banner";
 import EventsPage from "../../Events/EventsPage/EventsPage";
+import Footer from "../Footer/Footer";
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
                <EventsPage events={events}></EventsPage>
                </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
