@@ -1,20 +1,26 @@
 import { getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import React, { useContext, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GoogleAuthProvider } from "firebase/auth";
 import swal from "sweetalert";
 import app from "../FireBase/firebase.config";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const auth = getAuth(app);
 const Login = () => {
- 
+  const {user , loading} = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
   const [sucess, setSucess] = useState("");
   const emailRef = useRef(null);
 
   const provider = new GoogleAuthProvider();
-
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log('location in the loginPage',location);
+  if(loading){
+    <progress className="progress w-56"></progress>
+}
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -27,7 +33,8 @@ const Login = () => {
       .then((results) => {
         const user = results.user;
         console.log(user);
-
+        // navigation 
+        navigate(location?. state ? location.state : '/');
         if (user) {
           setSucess(" Your Account Login SuccessFully ");
         swal(
