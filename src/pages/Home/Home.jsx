@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../../Header/Banner/Banner";
 import EventsPage from "../../Events/EventsPage/EventsPage";
 import Footer from "../Footer/Footer";
+import CustomerReview from "../../Compunents/CustomerReview/CustomerReview";
 
 
 
@@ -17,7 +18,9 @@ const Home = () => {
                <EventsPage events={events}></EventsPage>
                </div>
             </div>
-           
+           <div className="px-24">
+            <CustomerReview></CustomerReview>
+           </div>
         </div>
     );
 };

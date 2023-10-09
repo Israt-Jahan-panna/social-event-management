@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import swal from "sweetalert";
 
 const EventsDetails = () => {
@@ -31,7 +31,7 @@ const EventsDetails = () => {
 
   return (
     <div className="w-full ">
-      <div className="relative flex mx-auto max-w-[50rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+      <div className="relative flex mx-auto max-w-[50rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 ">
         <div className="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
           <img src={image} alt="" />
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
@@ -42,7 +42,7 @@ const EventsDetails = () => {
              {name}
             </h5>
             <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-blue-gray-900 antialiased">
-             ${price}
+            Cost: ${price}
             </h5>
 
           </div>
