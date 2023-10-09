@@ -94,7 +94,7 @@ const NavBar = () => {
           </div>
           <Logo></Logo>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar hidden lg:flex">
           <ul className="gap-10 menu-horizontal px-1">
             <li>
               <NavLink
@@ -156,9 +156,9 @@ const NavBar = () => {
           </ul>
         </div>
         {user ? (
-          <div className="flex">
-            <p className="text-xs ">{user.displayName}</p>{" "}
+          <div className="flex gap-2">
             <img className="" src={user.photoURL} alt="" />
+            <p className="text-xs ">{user.displayName}</p>
             <button onClick={handelSingOut} className="btn">
               Sing Out
             </button>
