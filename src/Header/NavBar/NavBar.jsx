@@ -140,7 +140,11 @@ const NavBar = () => {
     </ul>
   </div>
   {
-    user ?  <button onClick={handelSingOut} className="btn">Sing Out</button>
+    user ? <div className="flex"> <p className="text-xs ">{user.displayName
+    }</p> <button onClick={handelSingOut} className="btn">Sing Out</button> 
+    
+    </div>
+    
     :
     <div className="navbar-end">
     <Link to={"/login"}><a className="btn">Log In</a></Link>
