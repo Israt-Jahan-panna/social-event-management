@@ -6,6 +6,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
   const [loginError, setLoginError] = useState("");
+  const [sucess, setSucess] = useState("");
   const emailRef = useRef(null);
 
   const provider = new GoogleAuthProvider();
@@ -16,6 +17,7 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
     setLoginError("");
+    setSucess("");
 
     signInWithEmailAndPassword(auth, email, password)
       .then((results) => {
@@ -25,11 +27,11 @@ const Login = () => {
         if (user.emailVerified) {
           // User logged in successfully
         } else {
-          setLoginError("Email not found or incorrect password");
+          setLoginError("Email doesn't match");
         }
       })
       .catch((error) => {
-        setLoginError("Email not found or incorrect password");
+        setLoginError("Password doesn't match");
         console.log(error.message);
       });
   };
@@ -39,12 +41,13 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        // You can handle Google login success here
+       
       })
       .catch((error) => {
         console.log(error.message);
-        // Handle Google login error here
+        
       });
+      
   };
 
   return (
@@ -88,9 +91,8 @@ const Login = () => {
               </button>
             </div>
             <div className="mx-auto">
-              {loginError && (
-                <p className="text-red-400  mb-6">{loginError}</p>
-              )}
+              {sucess && <p className="text-blue-400  mb-6">{sucess}</p>}
+              {loginError && <p className="text-red-400  mb-6">{loginError}</p>}
             </div>
             <p className="p-4">
               New to this website?{" "}
