@@ -2,7 +2,7 @@ import Events from "../Events";
 
 
 const EventsPage = ({events}) => {
-    console.log(events)
+    // console.log(events)
     return (
         <div>
             <h2 className="text-5xl ">Our Services</h2>
