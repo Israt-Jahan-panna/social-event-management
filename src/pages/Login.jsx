@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import auth from "../FireBase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
+import swal from "sweetalert";
 
 const Login = () => {
   const [loginError, setLoginError] = useState("");
@@ -15,19 +16,26 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
     setLoginError("");
     setSucess("");
+    console.log(email, password);
 
     signInWithEmailAndPassword(auth, email, password)
       .then((results) => {
         const user = results.user;
         console.log(user);
 
-        if (user.emailVerified) {
-          // User logged in successfully
+        if (user) {
+          setSucess(" Your Account Create SuccessFully ");
+        swal(
+            "Login successful",
+            "success"
+          );
+        
+          return ;
         } else {
           setLoginError("Email doesn't match");
+          return;
         }
       })
       .catch((error) => {

@@ -39,6 +39,10 @@ const Register = () => {
       .then((results) => {
         const user = results.user;
         setSucess(" Your Account Create SuccessFully ");
+        swal(
+            "Registration  successful",
+            "success"
+          );
         
 
         //update profile 
