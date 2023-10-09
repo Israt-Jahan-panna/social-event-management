@@ -44,7 +44,7 @@ const {createUser} = useContext(AuthContext)
         const user = results.user;
         setSucess(" Your Account Create SuccessFully ");
         swal(
-            "Registration  successful",
+            "Registration  and Login successful ",
             "success"
           );
         
