@@ -1,11 +1,14 @@
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import React, { useRef, useState } from "react";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import auth from "../FireBase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
 import swal from "sweetalert";
+import app from "../FireBase/firebase.config";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
+const auth = getAuth(app);
 const Login = () => {
+  const {signIn} = useContext(AuthContext)
   const [loginError, setLoginError] = useState("");
   const [sucess, setSucess] = useState("");
   const emailRef = useRef(null);
@@ -26,7 +29,7 @@ const Login = () => {
         console.log(user);
 
         if (user) {
-          setSucess(" Your Account Create SuccessFully ");
+          setSucess(" Your Account Login SuccessFully ");
         swal(
             "Login successful",
             "success"
@@ -34,12 +37,12 @@ const Login = () => {
         
           return ;
         } else {
-          setLoginError("Email doesn't match");
+          setLoginError("Email or Password doesn't match ");
           return;
         }
       })
       .catch((error) => {
-        setLoginError("Password doesn't match");
+        setLoginError("Email or Password doesn't match");
         console.log(error.message);
       });
   };

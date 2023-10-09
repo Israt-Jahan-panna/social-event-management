@@ -1,14 +1,18 @@
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
+import { useContext, useState } from "react";
 import { FaEye , FaEyeSlash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import auth from "../../FireBase/firebase.config";
 import swal from 'sweetalert';
-
+import app from "../../FireBase/firebase.config";
+import AuthProvider, { AuthContext } from "../../AuthProvider/AuthProvider";
+const auth = getAuth(app);
 const Register = () => {
   const [registerError, setRegisterError] = useState('');
   const [sucess, setSucess] = useState('');
   const [passwordShow , setPasswordShow ] = useState(false)
+const {createUser} = useContext(AuthContext)
+
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
