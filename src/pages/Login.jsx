@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { GoogleAuthProvider } from "firebase/auth";
 import swal from "sweetalert";
 import app from "../FireBase/firebase.config";
-import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const auth = getAuth(app);
 const Login = () => {
-  const {signIn} = useContext(AuthContext)
+ 
   const [loginError, setLoginError] = useState("");
   const [sucess, setSucess] = useState("");
   const emailRef = useRef(null);
