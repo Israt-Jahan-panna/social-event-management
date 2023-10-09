@@ -17,7 +17,7 @@ const Home = () => {
                <EventsPage events={events}></EventsPage>
                </div>
             </div>
-            <Footer></Footer>
+           
         </div>
     );
 };
