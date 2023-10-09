@@ -3,6 +3,7 @@ import Banner from "../../Header/Banner/Banner";
 import EventsPage from "../../Events/EventsPage/EventsPage";
 import Footer from "../Footer/Footer";
 import CustomerReview from "../../Compunents/CustomerReview/CustomerReview";
+import FeatureServices from "../../Compunents/FeatureServices/FeatureServices";
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
            <div className="px-24">
             <CustomerReview></CustomerReview>
            </div>
+           <div className="px-24"><FeatureServices></FeatureServices></div>
         </div>
     );
 };

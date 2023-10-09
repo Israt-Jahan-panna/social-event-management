@@ -6,7 +6,7 @@ const Events = ({event}) => {
 
    }
 
-     const {id,name , image , short_description,button_text} = event || {} ; 
+     const {id,price,name , image , short_description,button_text} = event || {} ; 
     return (
         <div>
             <div className="card w-80 mb-10 bg-slate-100 ">
@@ -16,9 +16,10 @@ const Events = ({event}) => {
   <div className="card-body items-center text-center ">
     <h2 className="card-title">{name}</h2>
     <p>{short_description}</p>
+    <p>Price: ${price}</p>
     <div className="card-actions">
-      <Link to={`/eventdetails/${id}`}>
-      <button onClick={handelDetails} className="btn bg-red-500 "> View Details</button>
+      <Link to={`/servicedetails/${id}`}>
+      <button onClick={handelDetails} className="btn bg-red-500 "> Service Details</button>
       </Link>
     </div>
   </div>

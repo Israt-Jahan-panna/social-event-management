@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import swal from "sweetalert";
 
-const EventsDetails = () => {
+const ServiceDetails = () => {
   const { id } = useParams();
   const events = useLoaderData();
   const event = events.find((event) => event.id == id);
@@ -71,4 +71,4 @@ const EventsDetails = () => {
   );
 };
 
-export default EventsDetails;
+export default ServiceDetails;
