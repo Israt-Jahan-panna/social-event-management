@@ -12,6 +12,3 @@ Here Is 5 Feature  and functionalitis of this project:
 4. In this website have private routre loging system.
 
 5. In this website have we can contact and see the details plan .
-
-
-Click here for the private repo: [https://classroom.github.com/a/ehOGNGkI](https://classroom.github.com/a/ehOGNGkI)
